@@ -1,0 +1,33 @@
+.watchListBtn button{
+    position: relative;
+    background-color: #485563;
+    z-index: 2;
+    width: 40px;
+    height: 40px;
+    margin-left: 20px;
+    color: white;
+    font-size: 18px;
+    border-radius: 50%;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: .3s ease-in-out;
+  }
+   
+  .watchListBtn button:after{
+    position: absolute;
+    font-family:Font Awesome\ 5 Free;
+    font-weight: 900;
+    content: '\f055' ;
+    top: 13px;
+    left: 10px;
+    color: white;
+    font-size: 8px;
+    width: 20px;
+    height: 20px;
+    transition: .3s ease-in-out;
+  }
+  
+  .watchListBtn button:hover , .watchListBtn button:hover:after{
+    color: #29323c;
+  }

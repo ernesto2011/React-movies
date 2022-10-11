@@ -1,0 +1,203 @@
+.movie-detail{
+    width: 100%;
+  }
+  
+  .movie-detail .movie-detail-cover{
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    background-repeat: no-repeat;
+    background-size: cover;
+    width: 100%;
+    height: 85vh;
+    position: relative;
+  }
+  
+  .movie-detail .movie-detail-cover .goback{
+    position: absolute;
+    top: 20px;
+    left: 20px;
+    color: white;
+    font-size: 25px;
+    cursor: pointer;
+  }
+  
+  .movie-detail .movie-detail-cover .detail{
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    text-align: left;
+    color: white;
+    padding: 0 20px;
+    margin-top: -50px;
+  }
+  
+  .movie-detail .movie-detail-cover .detail .title{
+    font-size: 20px;
+    font-weight: bold;
+  }
+  
+  .movie-detail .movie-detail-cover .detail .line{
+    width: 130px;
+    height: 5px;
+    border-radius: 20px;
+    background-color: white;
+    margin:5px 0 20px 0;
+  }
+  
+  .movie-detail .movie-detail-cover .detail .original-title{
+    font-size: 15px;
+  }
+  
+  .movie-detail .movie-detail-cover .detail .release_date{
+    background-color: white;
+    padding: 5px 0px;
+    margin: 15px 0;
+    font-size: 12px;
+    width: 100px;
+    color: #29323c;
+    border-radius: 20px;
+    text-align: center;
+  }
+  
+  .movie-detail .movie-detail-cover .detail .genres{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+  }
+  
+  .movie-detail .movie-detail-cover .detail .genres .genre{
+    padding-right: 10px;
+  }
+  
+  .movie-detail .movie-detail-cover .detail .overview{
+    width: 380px;
+    font-size: 15px;
+    font-weight: lighter;
+  }
+  
+  .movie-detail .movie-detail-cover .detail .icon{
+    width: 25px;
+    height: 25px;
+    text-align: center;
+    line-height: 25px;
+    border-radius: 50%;
+    background-color: white;
+    color: #29323c;
+    font-size: 13px;
+    margin:5px 10px 0 0;
+  
+  }
+  
+  .movie-detail .movie-detail-cover .circuralBar{
+    width: 60px;
+    margin: 20px;
+  }
+  
+  .movie-detail .movie-detail-cover .triangle{
+    position: absolute;
+    bottom: 0;
+    left: 0;
+  }
+  
+  .movie-detail .movie-detail-cover .teaser{
+    position: absolute;
+    bottom: -100px;
+    right: 150px;
+    z-index: 10;
+  }
+  
+  .actors-container{
+    width: 100%;
+    margin: 150px auto 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .actors-container h1{
+    text-align: left;
+    color: white;
+    text-transform: uppercase;
+  }
+  
+  .actors-container .actors{
+    width: 80%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+  }
+  
+  .actors-container .actor{
+    width: 300px;
+    height: 150px;
+    display: flex;
+    justify-content: flex-start;
+    background-color: #29323c;
+    margin:10px ;
+    text-align: left;
+    color: white;
+    border-radius: 20px 0 20px 0;
+    overflow: hidden;
+  }
+  
+  .actors-container .actor .actor-detail{
+    padding-top: 8px;
+    margin-bottom: -20px;
+  }
+  
+  .actors-container .actor .actor-detail span{
+    color: #485563;
+    font-size: 12px;
+  }
+  
+  .actors-container .actor .actor-detail p{
+    font-size: 15px;
+    margin-top: 0px;
+  }
+  
+  .actors-container .actor img{
+    margin-right: 10px;
+  }
+  
+  .player{
+    width: 100%;
+    margin: 100px 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .player-wrapper {
+    position: relative;
+    
+    display: flex;
+    justify-content: flex-start;
+  }
+  
+  .player-wrapper .player-btns{
+    height:360px;
+    overflow-y: scroll;
+  }
+  
+  .player-wrapper .player-btn{
+    background-color: #29323c;
+    margin:0 0 2px 2px;
+    text-align: left;
+    width: 250px;
+    padding: 8px 10px;
+    font-size: 12px;
+    color: white;
+    cursor: pointer;
+  }
+  
+  .active{
+    background-color: #29323c8c !important;
+  }
+  
+  .player-wrapper .player-btn span{
+    font-weight: bold;
+  }
+ 

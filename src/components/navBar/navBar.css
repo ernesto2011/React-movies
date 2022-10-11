@@ -1,0 +1,154 @@
+.nav{
+    width:100%;
+    height: 100px;
+    background: rgb(2,0,36);
+    background: radial-gradient(circle, rgba(2,0,36,1) 21%, rgba(9,9,121,1) 50%, rgba(0,212,255,1) 100%);
+    color: white;
+  }
+  
+  .nav .main-nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: baseline;
+    padding: 0 10px;
+    border-bottom: 2px solid #485563;
+  }
+  
+  .nav .main-nav .watch-list{
+    position: relative;
+  }
+  
+  .nav .main-nav .watch-list .watch-list-length{
+    position: absolute;
+    width: 15px;
+    height: 15px;
+    text-align: center;
+    line-height: 15px;
+    bottom:-5px;
+    left:0;
+    background-color: rgb(172, 31, 31);
+    font-size: 10px;
+    border-radius: 50%;
+  
+  }
+  
+  .nav .main-nav .watch-list i{
+    cursor: pointer;
+  }
+  
+  .nav .main-nav .watch-list .list{
+    position: absolute;
+    z-index: 15;
+    top:25px;
+    right: 0;
+    width: 300px;
+    overflow-y: scroll;
+    color: black;
+    background-color: #29323c;
+    color: white;
+    border-radius: 0px;
+    transition: .3s ease-in-out;
+  }
+  
+  .nav .main-nav .watch-list .list .list-container{
+    position: relative;
+  
+  }
+  
+  .nav .main-nav .watch-list .list .list-item{
+    display: flex;
+    position: relative;
+    justify-content: flex-start;
+    text-align: left;
+    height: 120px;
+    padding:0 5px 0 0;
+  }
+  
+  .nav .main-nav .watch-list .list .list-item img{
+    margin-right: 10px;
+  }
+  
+  .nav .main-nav .watch-list .list .list-item .item-detail{
+    height: 120px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+  }
+  
+  .nav .main-nav .watch-list .list .list-item .item-detail .item-text{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+  }
+  
+  .nav .main-nav .watch-list .list .list-item .item-detail .item-text .info{
+    display: flex;
+    justify-content: flex-start;
+    align-items: baseline;
+    margin-bottom: 5px;
+  }
+  
+  .nav .main-nav .watch-list .list .list-item .item-detail .item-text .info i{
+    background-color: white;
+    text-align: center;
+    line-height: 15px;
+    width: 15px;
+    height: 15px;
+    color:#29323c;
+    border-radius: 50%;
+    margin-right: 30px;
+    font-size: 10px;
+  }
+  
+  .nav .main-nav .watch-list .list .list-item .item-detail .item-text .info span{
+    font-size: 12px;
+    color: #485563;
+  }
+  
+  .nav .main-nav .watch-list .list .list-item .item-detail .vote{
+    width: 30px;
+    margin-top: 10px;
+  }
+  
+  .nav .main-nav .watch-list .list .list-item .item-detail .title{
+    margin-bottom: 5px;
+    color: white;
+    font-weight: bold;
+  }
+  
+  .nav .main-nav .watch-list .list .trash{
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    color: rgb(241, 89, 89);
+    transition: .3s ease-in-out;
+  }
+  
+  .nav .main-nav .watch-list .list .trash:hover{
+    color: rgb(185, 40, 40);
+  }
+  
+  .nav .main-nav .watch-list .list .line{
+    position: absolute;
+    background-color: white;
+    width: 80px;
+    height: 1px;
+    border-radius: 20px;
+    bottom: -1px;
+    left: 50%;
+  }
+  
+  .nav .sub-nav p{
+    padding: 0 10px;
+    font-weight: bold;
+  }
+  
+  .main-nav .nav-logo{
+    font-size: 20px;
+  }
+  
+  .main-nav .nav-logo span{
+    margin-left: 10px;
+    text-transform: uppercase;
+  }
+  /*navigation*/
