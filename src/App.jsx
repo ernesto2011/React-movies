@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <NavBar watchList={watchList} setWatchList={setWatchList} />c
+      <NavBar watchList={watchList} setWatchList={setWatchList} />
         <Routes>
           
           <Route path="/movie/:id" element={<MovieDetail />} />
