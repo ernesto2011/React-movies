@@ -6,12 +6,12 @@ import 'react-circular-progressbar/dist/styles.css';
 import WatchListBtn from '../watchListBtn/watchListBtn'
 import Loader from '../loader/loader'
 import 'font-awesome/css/font-awesome.min.css';
+import { baseUrl, API_KEY } from '../../api/config';
 
 const MovieCover = (watchList, setWatchList) => {
   const [moviesCover, setMoviesCover] = useState([]);
   const [loader, setLoader] = useState(false);
 
-  const API_KEY = '443a4596b85914edb9a1a8e80c7456c3';
 
   useEffect(() => {
      fetchMovies();
@@ -24,7 +24,7 @@ const MovieCover = (watchList, setWatchList) => {
   }, []);
 
   async function fetchMovies() {
-    const response = await fetch(`https://api.themoviedb.org/3/movie/upcoming?api_key=${API_KEY}`);
+    const response = await fetch(`${baseUrl}movie/upcoming?api_key=${API_KEY}`);
     const data = await response.json();
     console.log(data)
     setMoviesCover(data.results);

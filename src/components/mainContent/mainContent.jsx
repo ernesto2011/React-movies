@@ -3,9 +3,10 @@ import MovieSlider from '../movieSlider/movieSlider';
 import MovieCover from '../movieCover/movieCover';
 import MovieCatalogue from '../movieCatalogue/movieCatalogue';
 
+import { baseUrl, API_KEY } from '../../api/config';
+
 function MainContent ({watchList, setWatchList}){
     const [movies, setMovies] = useState([]);
-    const API_KEY = 'b4aeb6a70689e5caaf1a4ec1428f7ac0';
   
   
     useEffect(() => {
@@ -13,7 +14,7 @@ function MainContent ({watchList, setWatchList}){
     }, []);
   
     const fetchMovies = async () => {
-      const response = await fetch(`https://api.themoviedb.org/3/movie/top_rated?api_key=${API_KEY}`);
+      const response = await fetch(`${baseUrl}movie/top_rated?api_key=${API_KEY}`);
       const data = await response.json();
       setMovies(data.results);
     }

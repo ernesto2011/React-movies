@@ -2,12 +2,13 @@ import React, {useState, useEffect} from 'react'
 import { Link } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 
+import { baseUrl, API_KEY } from '../../api/config';
+
 const  Form = ({setYear, setCategory}) => {
 
   const [movieSearch, setMovieSearch] = useState([]);    
     const [query, setQuery] = useState("");    
     const [yearArray,setYearArray] = useState([]);
-    const API_KEY = '443a4596b85914edb9a1a8e80c7456c3';
 
     useEffect( () => {
         addYears();
@@ -19,7 +20,7 @@ const  Form = ({setYear, setCategory}) => {
     
      const getMoviesByQuery = async () =>{
         if(query.length >= 2){
-            const response = await fetch(`https://api.themoviedb.org/3/search/movie?api_key=${API_KEY}&query=${query}`); 
+            const response = await fetch(`${baseUrl}search/movie?api_key=${API_KEY}&query=${query}`); 
             const data = await response.json();
             setMovieSearch(data.results);
         }
@@ -71,7 +72,7 @@ const  Form = ({setYear, setCategory}) => {
                       <option value="top_rated">TopRated</option>
                       <option value="now_playing">Now Playing</option>
                   </select>
-                  <i className="fa fa-box"></i>
+                  <i className="fas fa-box"></i>
               </div>
               
               <div className="select">
@@ -80,7 +81,7 @@ const  Form = ({setYear, setCategory}) => {
                           <option key={Math.random() * 1000} value={year}>{year}</option>
                       ))}
                   </select>
-                  <i className="fa fa-calendar-day"></i>
+                  <i className="fas fa-calendar-day"></i>
               </div>
 
           </div>

@@ -5,6 +5,7 @@ import Paginate from "react-paginate";
 import WatchListBtn from "../watchListBtn/watchListBtn";
 import 'font-awesome/css/font-awesome.min.css';
 import './movieCatalogue.css';
+import { baseUrl, API_KEY } from '../../api/config';
 
 function MovieCatalogue({ watchList, setWatchList }) {
   const [movies, setMovies] = useState([]);
@@ -14,7 +15,6 @@ function MovieCatalogue({ watchList, setWatchList }) {
   const [category, setCategory] = useState("");
   const isMounted = useRef(false);
 
-  const API_KEY = "b4aeb6a70689e5caaf1a4ec1428f7ac0";
 
   useEffect(() => {
     fetchMovies();
@@ -28,7 +28,7 @@ function MovieCatalogue({ watchList, setWatchList }) {
       //fetchMoviesByCategory();
       const fetchMoviesByCategory = async () =>{
         const response = await fetch(
-          `https://api.themoviedb.org/3/movie/${category}?api_key=${API_KEY}&page=${page}`
+          `${baseUrl}movie/${category}?api_key=${API_KEY}&page=${page}`
         );
         const data = await response.json();
     
@@ -43,7 +43,7 @@ function MovieCatalogue({ watchList, setWatchList }) {
 
   async function fetchMovies() {
     const response = await fetch(
-      `https://api.themoviedb.org/3/discover/movie?api_key=${API_KEY}&page=${page}&primary_release_year=${year}`
+      `${baseUrl}discover/movie?api_key=${API_KEY}&page=${page}&primary_release_year=${year}`
     );
     const data = await response.json();
     setMovies(data.results);
