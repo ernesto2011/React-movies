@@ -10,7 +10,7 @@ function App() {
   const [watchList, setWatchList] = useState([]);
 
   useEffect(() => {
-    function getWatchListLocal(){
+    const getWatchListLocal = () =>{
       if (localStorage.getItem('watchList') !== null) {
           setWatchList(JSON.parse(localStorage.getItem('watchList')));
       }

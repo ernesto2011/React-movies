@@ -23,7 +23,7 @@ const MovieCover = (watchList, setWatchList) => {
     }, 1000);
   }, []);
 
-  async function fetchMovies() {
+  const fetchMovies = async () => {
     const response = await fetch(`${baseUrl}movie/upcoming?api_key=${API_KEY}`);
     const data = await response.json();
     console.log(data)
