@@ -5,6 +5,7 @@ import MovieSlider from '../movieSlider/movieSlider'
 import Loader from '../loader/loader'
 import 'font-awesome/css/font-awesome.min.css';
 import './movieDetail.css';
+import { baseUrl, API_KEY } from '../../api/config';
 
 
 const MovieDetail= () =>{
@@ -20,8 +21,6 @@ const MovieDetail= () =>{
     const [similarMovies, setSimilarMovies] = useState([]);
     const [url, setUrl] = useState("");
     const [loader, setLoader] = useState(false);
-
-    const API_KEY = 'b4aeb6a70689e5caaf1a4ec1428f7ac0';
     const { id } = useParams();
 
 
@@ -42,14 +41,14 @@ const MovieDetail= () =>{
 
     
     const fetchMovies= async () => {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${id}?api_key=${API_KEY}`);
+        const response = await fetch(`${baseUrl}movie/${id}?api_key=${API_KEY}`);
         const data = await response.json();
 
         setMovie(data);
     }
 
     const fetchMovieTrailer = async() =>{
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/videos?api_key=${API_KEY}`);
+        const response = await fetch(`${baseUrl}movie/${id}/videos?api_key=${API_KEY}`);
         const data = await response.json();
 
         const trailer = data.results.filter((video) => {
@@ -62,7 +61,7 @@ const MovieDetail= () =>{
     }
 
     const fetchActors = async () => {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/credits?api_key=${API_KEY}`);
+        const response = await fetch(`${baseUrl}movie/${id}/credits?api_key=${API_KEY}`);
         const data = await response.json();
 
 
@@ -70,7 +69,7 @@ const MovieDetail= () =>{
     }
 
     const fetchSimilarMovies = async () => {
-        const response = await fetch(`https://api.themoviedb.org/3/movie/${id}/similar?api_key=${API_KEY}`);
+        const response = await fetch(`${baseUrl}movie/${id}/similar?api_key=${API_KEY}`);
         const data = await response.json();
 
         setSimilarMovies(data.results);

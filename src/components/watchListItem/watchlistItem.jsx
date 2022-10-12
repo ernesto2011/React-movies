@@ -34,11 +34,11 @@ function WatchListItem({ watchList, setWatchList, height }) {
                                 <div className="item-text">
                                     <span className="title">{listItem.movie.title}</span>
                                     <span className="info">
-                                        <i className="fa fa-fire"></i>
+                                        <i className="fas fa-fire"></i>
                                         <span>{listItem.movie.popularity}</span>
                                     </span>
                                     <span className="info">
-                                        <i className="fa fa-calendar-day"></i>
+                                        <i className="fas fa-calendar-day"></i>
                                         <span>{listItem.movie.release_date}</span>
                                     </span>
                                 </div>
