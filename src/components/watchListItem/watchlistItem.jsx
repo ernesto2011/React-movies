@@ -3,9 +3,9 @@ import { CircularProgressbar, buildStyles } from 'react-circular-progressbar';
 import { Link } from 'react-router-dom';
 import 'font-awesome/css/font-awesome.min.css';
 
-function WatchListItem({ watchList, setWatchList, height }) {
+const WatchListItem = ({ watchList, setWatchList, height }) => {
 
-    function deleteFromWatchList(movie) {
+    const deleteFromWatchList = (movie) => {
         setWatchList(watchList.filter((wl) => wl.movie.id !== movie.id));
     }
 

@@ -32,7 +32,7 @@ const  Form = ({setYear, setCategory}) => {
         setQuery(e.target.value);
     }
 
-    const addYears= () =>{
+    const addYears = () =>{
         var thisYear = new Date().getFullYear();
         var years = [];
 

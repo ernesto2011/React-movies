@@ -9,11 +9,11 @@ function WatchListBtn({watchList,setWatchList,movie}){
     // eslint-disable-next-line react-hooks/exhaustive-deps
     }, [watchList]);
 
-    function saveWatchListLocal(){
+    const saveWatchListLocal = () => {
         localStorage.setItem('watchList',JSON.stringify(watchList));
     }
 
-    function addToWatchList(movie){
+    const addToWatchList = (movie) => {
         var exist = false;
       
         //check if the movie ezist in the list

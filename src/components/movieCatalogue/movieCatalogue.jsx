@@ -41,7 +41,7 @@ function MovieCatalogue({ watchList, setWatchList }) {
     }
   }, [category]);
 
-  async function fetchMovies() {
+  const fetchMovies= async () =>{
     const response = await fetch(
       `${baseUrl}discover/movie?api_key=${API_KEY}&page=${page}&primary_release_year=${year}`
     );
@@ -54,7 +54,7 @@ function MovieCatalogue({ watchList, setWatchList }) {
 
   
 
-  function handlePageChange(page) {
+  const handlePageChange = (page) =>{
     setPage(page.selected + 1);
   }
 
@@ -92,7 +92,7 @@ function MovieCatalogue({ watchList, setWatchList }) {
         pageCount={allPages}
         initialPage={0}
         marginPagesDisplayed={1}
-        pageRangeDisplayed={4}
+        pageRangeDisplayed={3}
         previousLabel={<i className="fa fa-angle-left"></i>}
         nextLabel={<i className="fa fa-angle-right"></i>}
         containerClassName={"paginate-container"}

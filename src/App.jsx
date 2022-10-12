@@ -10,7 +10,7 @@ function App() {
   const [watchList, setWatchList] = useState([]);
 
   useEffect(() => {
-    function getWatchListLocal(){
+    const getWatchListLocal = () =>{
       if (localStorage.getItem('watchList') !== null) {
           setWatchList(JSON.parse(localStorage.getItem('watchList')));
       }
@@ -25,7 +25,7 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <NavBar watchList={watchList} setWatchList={setWatchList} />c
+      <NavBar watchList={watchList} setWatchList={setWatchList} />
         <Routes>
           
           <Route path="/movie/:id" element={<MovieDetail />} />

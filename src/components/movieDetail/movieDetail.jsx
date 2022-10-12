@@ -40,14 +40,14 @@ const MovieDetail= () =>{
     }, []);
 
     
-    const fetchMovies= async () => {
+    const fetchMovies = async () => {
         const response = await fetch(`${baseUrl}movie/${id}?api_key=${API_KEY}`);
         const data = await response.json();
 
         setMovie(data);
     }
 
-    const fetchMovieTrailer = async() =>{
+    const fetchMovieTrailer = async () =>{
         const response = await fetch(`${baseUrl}movie/${id}/videos?api_key=${API_KEY}`);
         const data = await response.json();
 
