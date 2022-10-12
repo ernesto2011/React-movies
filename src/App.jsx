@@ -25,10 +25,10 @@ function App() {
   return (
     <div className="App">
       <Router>
-      <NavBar watchList={watchList} setWatchList={setWatchList} />
+      <NavBar watchList={watchList} setWatchList={setWatchList} />c
         <Routes>
           
-          <Route path="/movie/:id" exact element={<MovieDetail />} />
+          <Route path="/movie/:id" element={<MovieDetail />} />
           <Route path="/" element={<MainContent watchList={watchList} setWatchList={setWatchList} />} />      
         </Routes>
         
