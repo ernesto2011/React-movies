@@ -12,12 +12,10 @@ const  Form = ({setYear, setCategory}) => {
 
     useEffect( () => {
         addYears();
-    }, []);
-
-    useEffect( () => {
         getMoviesByQuery();
     }, [query]);
-    
+
+
      const getMoviesByQuery = async () =>{
         if(query.length >= 2){
             const response = await fetch(`${baseUrl}search/movie?api_key=${API_KEY}&query=${query}`); 
