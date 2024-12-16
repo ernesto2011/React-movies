@@ -83,7 +83,7 @@ const MovieDetail= () =>{
                     <Loader/>
                     :
                     <div className="movie-detail">
-                        <div className="movie-detail-cover" style={{ backgroundImage: `linear-gradient(to right, #29323c 0%, #4855638c 100%), url(http://image.tmdb.org/t/p/original/${movie.backdrop_path})` }}>
+                        <div className="movie-detail-cover" style={{ backgroundImage: ` url(http://image.tmdb.org/t/p/original/${movie.backdrop_path})` }}>
                             <Link to="/" className="goback">
                                 <div >
                                     <i className="fa fa-arrow-left"></i>
