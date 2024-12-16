@@ -9,6 +9,7 @@ const  Form = ({setYear, setCategory}) => {
   const [movieSearch, setMovieSearch] = useState([]);    
     const [query, setQuery] = useState("");    
     const [yearArray,setYearArray] = useState([]);
+    const [year2, setYear2] = useState("");
 
     useEffect( () => {
         addYears();
@@ -39,6 +40,11 @@ const  Form = ({setYear, setCategory}) => {
         }
         setYearArray(years);
     }
+    const handleYear = (e)=>{
+        setYear2(e.target.value);
+        setYear(e.target.value);
+    }
+    
     return(
       <div className="search">
 
@@ -74,7 +80,9 @@ const  Form = ({setYear, setCategory}) => {
               </div>
               
               <div className="select">
-                  <select onChange={ (e) => {setYear(e.target.value)} }>                        
+                  <select onChange={ handleYear} 
+                    value={year2}
+                    >                        
                       {yearArray.map( year => (
                           <option key={Math.random() * 1000} value={year}>{year}</option>
                       ))}
